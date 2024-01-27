@@ -12,7 +12,7 @@ services:
       - PGID=1000
       - TZ=Europe/London
       - SERVERURL=auto #optional
-      - SERVERPORT=85359 #optional
+      - SERVERPORT=35359 #optional
       - PEERS=4 #optional
       - PEERDNS=8.8.8.8, 8.8.4.4 #optional
       - INTERNAL_SUBNET=10.13.13.0 #optional
@@ -21,7 +21,7 @@ services:
       - ~/wg_docker/config:/config
       - /lib/modules:/lib/modules
     ports:
-      - 85359:51820/udp
+      - 35359:51820/udp
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
     restart: unless-stopped
